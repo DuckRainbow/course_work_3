@@ -8,6 +8,13 @@ def unpucking_json(file):
         return data
 
 
-
-
-
+def cleaning_data(data):
+    new_data = []
+    for transaction in data:
+        if not transaction:
+            continue
+        elif transaction['state'] == 'CANCELED':
+            continue
+        else:
+            new_data.append(transaction)
+    return new_data
