@@ -255,6 +255,7 @@ cython_debug/
 .idea/
 
 materials/
-src/operations.json
+
 *.idea
 misc.xml
+/src/operations.json

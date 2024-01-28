@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 
 def unpucking_json(file):
@@ -18,3 +19,15 @@ def cleaning_data(data):
         else:
             new_data.append(transaction)
     return new_data
+
+
+def date_form(date_in):
+    date_out = datetime.strftime(datetime.strptime(date_in.split('T')[0], '%Y-%m-%d'), '%d.%m.%Y')
+    return date_out
+
+
+def outputting_data(some_dict):
+    return (f"{date_form(some_dict['date'])}, {some_dict['description']}\n"
+            f"{some_dict.get('from')} -> {some_dict['to']}\n"
+            f"{some_dict['operationAmount']['amount']} {some_dict['operationAmount']['currency']['name']} \n")
+
