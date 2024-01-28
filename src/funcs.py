@@ -19,6 +19,7 @@ def cleaning_data(data):
         else:
             new_data.append(transaction)
     return new_data
+<<<<<<< HEAD
 
 
 def date_form(date_in):
