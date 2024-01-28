@@ -258,4 +258,4 @@ materials/
 
 *.idea
 misc.xml
-/src/operations.json
+!/src/operations.json
