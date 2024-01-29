@@ -1,6 +1,5 @@
-import json
 from datetime import datetime
-from funcs import unpucking_json, cleaning_data, date_form, outputting_data
+from funcs import unpucking_json, cleaning_data, outputting_data
 
 
 def main_func():

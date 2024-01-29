@@ -10,6 +10,7 @@ def test_cleaning_data():
     assert cleaning_data([{'state': 'CANCELED'}, {}]) == []
     assert cleaning_data([{'state': 'CANCELED'}, {'state': 'EXECUTED'}]) == [{'state': 'EXECUTED'}]
 
+
 def test_date_form():
     assert date_form('2018-10-14T08:21:33.419441') == '14.10.2018'
 
